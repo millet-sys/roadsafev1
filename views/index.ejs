@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Road Safety Tips</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+    <script>
+        function getSafetyTip() {
+            // Use fetch API to make a POST request to get a random safety tip
+            fetch('/getSafetyTip', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    // Update the content of the <p> tag with the received data
+                    document.getElementById('safetyTipContent').innerText = `safetytip: "${data.safetytip}"\ncategory: "${data.category}"`;
+                })
+                .catch(error => console.error('Error fetching safety tip:', error));
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Header code here -->
+    <header>
+    <!-- Logo -->
+    <img src="images/roadsafelogo.png" alt="Logo">
+
+    </header>
+    <!-- End of header -->
+
+    <!-- Main body -->
+
+    <h1>Your road safety tip</h1>
+    <h3 style="color: white;" >Road Wisdom in Every CLICK !</h3>
+    <button class="safe-button" onclick="getSafetyTip()">Click Here To Get A Safety Tip !</button>
+    
+    <div class="card">
+        
+        <p id="safetyTipContent"></p>
+
+    </div>
+
+    <div class="rules-card">
+
+        <p class="rules">
+           RULE: DONT READ & DRIVE !
+        </p>
+        <p style="font-size: small; font-family: monospace;">powered by Millet</p>
+    
+    </div>
+</body>
+
+</html>

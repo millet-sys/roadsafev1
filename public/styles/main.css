@@ -1,0 +1,144 @@
+/* Reset some default styles for better cross-browser consistency */
+body,
+h1,
+h2,
+h3 {
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+}
+
+/* Style your header */ 
+
+header {
+  padding: 5px;
+  text-align: center;
+}
+
+/* Style your logo */
+header img {
+  width: 70px;
+  /* Adjust the width as needed */
+  height: auto;
+}
+
+/* Set the font type for dynamic content */
+
+#safetyTipContent {
+
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+/* Set a base font size and line height */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Style your header */
+h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 2px;
+  color: white;
+}
+
+/* Style the card container */
+.card {
+  background-color: rgb(46, 101, 254);
+  color: white;
+  font-weight: bold;
+  border: 5px solid white;
+  width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the rules card container */
+
+.rules-card {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+    width: 30%;
+    height: 25%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  
+/* Style the button */
+.safe-button {
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  padding: 12px 40px;
+  background-image: linear-gradient(to right,
+      rgb(18, 194, 233),
+      rgb(196, 113, 237),
+      rgb(246, 79, 89));
+  cursor: pointer;
+}
+
+.safe-button:hover {
+  animation: glow 2s linear infinite;
+}
+
+@keyframes glow {
+
+  0% {
+    box-shadow: 5px 5px 20px rgb(93, 52, 168), -5px -5px 20px rgb(93, 52, 168);
+  }
+
+  50% {
+    box-shadow: 5px 5px 20px rgb(81, 224, 210), -5px -5px 20px rgb(81, 224, 210);
+  }
+
+  100% {
+    box-shadow: 5px 5px 20px rgb(93, 52, 168), -5px -5px 20px rgb(93, 52, 168);
+  }
+}
+
+
+/* Add responsive styles using media queries */
+
+/* For small screens (mobile) */
+@media screen and (max-width: 767px) {
+
+  /* Adjust font size for smaller screens */
+  body {
+    font-size: 14px;
+  }
+
+  /* Center align the button on small screens */
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* For medium screens (tablets) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* Add specific styles for tablets if needed */
+}
+
+/* For large screens (desktops) */
+@media screen and (min-width: 992px) {
+  /* Add specific styles for desktops if needed */
+}
